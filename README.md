@@ -5,6 +5,5 @@ ntopng-docker
 
 #### Install & Run
 ```
-docker pull lucaderi/ntopng-docker
-docker run --net=host -name ntopng -t -i lucaderi/ntopng-docker ntopng -v
+docker run --net=host -ti -p 3000:3000 lucaderi/ntopng-docker
 ```
