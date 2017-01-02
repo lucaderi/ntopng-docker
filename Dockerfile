@@ -14,7 +14,7 @@ RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 EXPOSE 3000
 
-RUN echo '#!/bin/bash\n/etc/init.d/redis-server start\nntopng "$@"' > /tmp/run.sh
+COPY entrypoint.sh /tmp/run.sh
 RUN chmod +x /tmp/run.sh
 
 ENTRYPOINT ["/tmp/run.sh"]
